@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Heeyoung</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Bootstrap CDN-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<!-- Awesome Font -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--jQuery Google CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Aos CDN -->
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<!--AngularJS CDN-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+
+</head>
+<body ng-app="myApp">
+	<!-- 상단고정 메뉴 -->
+	<div class="bar">
+		<span class="name"><a href="index.html">Yoon Heeyoung</a>
+			<a href="projects.html" class="sub"><i class="fa fa-angle-right"></i>About</a></span>
+			<!-- 버거버튼 -->
+			<a href="#" class="menu">
+				<span class="line top"></span>
+				<span class="line middle"></span>
+				<span class="line bottom"></span>
+			</a>
+		</div>
+		<!-- 버거버튼 클릭시 fullpage menu -->
+		<nav id="primary-nav" class="primary-nav fixed">
+			<ul class="site">
+				<li class="hvr-underline-from-left"><a href="about.html">About me</a></li>
+				<li class="hvr-underline-from-left"><a href="projects.html">Projects</a></li>
+				<li class="hvr-underline-from-left"><a href="instagram.html">Instagram</a></li>
+			</ul>
+		</nav>
+		<!-- #primary-nav 실핼 시 화면 불투명 -->
+		<div id="site-overlay" class="site-overlay"></div>
+
+		<div class="page" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="3000">
+			<article>
+				<h2>a</h2>
+				<img src="css/img/jay-wennington-393218-unsplash.jpg" alt="about_img">
+				<section class="section">
+					<p><a href="#/!">한국어</a> | <a href="#!eng">English</a> </p>
+					<div ng-view></div>
+				</section>
+			</article>
+		</div>
+
+		<!-- footer Angularjs include -->
+		<div ng-include="'inc/footer.html'" ></div>
+		<!-- footer에 있는 'find me' 클릭하면 모달창으로 구글맵 보여줌 -->
+		<div class="modal fade" id="myModal">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<!-- Modal Header -->
+					<div class="modal-header">
+						<h4 class="modal-title">Find Me</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<!-- Modal body -->
+					<div class="modal-body" id="map" style="width:100%; height:500px"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery.slide.js"></script>
+		<script src="js/typeit.min.js"></script>
+		<script src="js/script.js?ver=1"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByv282dxfHCuRcW_6WUOmJgJGtJE2-AIE&callback=myMap"></script>
+
+	</body>
+	</html>

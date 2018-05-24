@@ -1,0 +1,90 @@
+/* Tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+	body { padding: 44px 0 0 0; }
+	.bar { top: 0; }
+	.bar .name { margin-left: 20px; }
+	.bar i { font-size: 10px; }
+	.bar .sub { font-size: 10px; }
+	.slide_img {top: 47%; width: auto;}
+	footer {	height: 300px;	}
+	.typing span { font-size: 28px; }
+	figure.effect-goliath p {
+		font-size: 50px;
+		letter-spacing: 2px;
+	}
+	figure.effect-goliath p span {
+		font-size: 15px;
+		letter-spacing: 5px;
+	}
+	#grid .item { width: 50%; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+	.typing span { font-size: 30px; }
+	footer {	height: 620px;	}
+	.p-grid figure h2 { 
+		background-color: initial;
+		font-size: 27px;
+		background-color: #000;
+	}
+	figure.effect-goliath p {
+		font-size: 35px;
+		letter-spacing: 2px;
+	}
+	figure.effect-goliath p i { letter-spacing: 12px;}
+	figure.effect-goliath p span {
+		font-size: 15px;
+		letter-spacing: 3px;
+		margin: -1px;
+	}
+	.sub {display: none;}
+	#grid { top: 50px; }
+	#grid .item { width: 100%; }
+	.slide_img {top: 47%; width: auto;}
+	.page { padding: 1em; margin: 5em 1em; }
+}
+
+/* Laptop */
+@media (min-width: 992px) and (max-width: 1199px) {
+	body { padding: 50px 0 0 0; }
+	.bar { top: 0; }
+	.slide_img {top: 47%;}
+	.slide { width: auto;}
+	.content { top: -50px; }
+	#grid .item { width: 50%; }
+}
+@media (min-width: 577px) and (max-width: 766px){
+	footer { height: 300px; }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+
+}
+/********************************************************/
+/******************* IE & Edge **********************/
+/********************************************************/
+@supports (-ms-ime-align:auto) {
+	.slide-container {
+		width: 100%;
+		height: 100vmin;
+		background: #252525;
+	}
+	.slide {
+		height: 100%;
+	}
+	.typing span { font-family: 'NanumSquare', sans-serif	}
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	/* IE10+ CSS styles go here */
+	.slide-container {
+		width: 100%;
+		height: 100vmin;
+		background: #252525;
+	}
+	.slide {
+		height: 100%;
+	}
+	.typing span { font-family: 'NanumSquare', sans-serif	}
+}
